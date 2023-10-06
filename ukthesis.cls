@@ -1,7 +1,7 @@
-\ProvidesClass{tudothesis}[2015/08/31 v0.9 wrapper to scrbook for thesis at TUDo]
+\ProvidesClass{ukthesis}[2023/10/06 v0.9 wrapper to scrbook for thesis at UK]
 % Option for tu colors:
-\newif\if@tucolor\@tucolorfalse
-\DeclareOption{tucolor}{\@tucolortrue}
+\newif\if@ukcolor\@ukcolorfalse
+\DeclareOption{ukcolor}{\@ukcolortrue}
 
 % All other Options go to KOMA-Script
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
@@ -20,23 +20,23 @@
 
 % Define our beloved tu colour:
 \RequirePackage{xcolor}
-\xdefinecolor{tugreen}{RGB}{132, 184, 25}
+\xdefinecolor{ukruby}{RGB}{199, 16, 92}
 
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 
-% add some Color to structural elements if option tucolor was given
+% add some Color to structural elements if option ukcolor was given
 \RequirePackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
 
 \KOMAoption{headsepline}{0.5pt}
-\if@tucolor%
-  \addtokomafont{title}{\color{tugreen}}          % title on titlepage
-  \addtokomafont{chapter}{\color{tugreen}}     % headlines of the chapters, sections etc. 
-  \setkomafont{headsepline}{\color{tugreen}}        % line between header and text body
-  \DeclareCaptionFont{tugreen}{\color{tugreen}}
+\if@ukcolor%
+  \addtokomafont{title}{\color{ukruby}}          % title on titlepage
+  \addtokomafont{chapter}{\color{ukruby}}     % headlines of the chapters, sections etc. 
+  \setkomafont{headsepline}{\color{ukruby}}        % line between header and text body
+  \DeclareCaptionFont{ukruby}{\color{ukruby}}
   \captionsetup{%
-              labelfont={bf,tugreen},     % bold label in tu colour
+              labelfont={bf,ukruby},     % bold label in tu colour
               format=plain,               % no indentation under the label
               width=0.9\textwidth,        % slightly smaller width than text
               font=small,                 % font slightly smaller than text
@@ -79,7 +79,7 @@
 
 % set title page elements
 \subject{Arbeit zur Erlangung des akademischen Grades\\ \thethesisclass}
-\publishers{\thechair \\ \thedivision \\ Technische Universität Dortmund}
+\publishers{\thechair \\ \thedivision \\ Universität Kassel}
 
 % page for the correctors
 \newcommand{\makecorrectorpage}{%
