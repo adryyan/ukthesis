@@ -61,6 +61,7 @@
 
 % initialize commands:
 \newcommand\thebirthplace{}
+\newcommand\thesupervisor{}
 \newcommand\thechair{}
 \newcommand\thedivision{}
 \newcommand\thethesisclass{}
@@ -70,6 +71,7 @@
 
 % new commands for information about the thesis
 \newcommand\birthplace[1]{\renewcommand\thebirthplace{geboren in #1}}
+\newcommand\supervisor[1]{\renewcommand\thesupervisor{#1}}
 \newcommand\chair[1]{\renewcommand\thechair{#1}}
 \newcommand\division[1]{\renewcommand\thedivision{#1}}
 \newcommand\thesisclass[1]{\renewcommand\thethesisclass{#1}}
@@ -79,7 +81,7 @@
 
 % set title page elements
 \subject{Arbeit zur Erlangung des akademischen Grades\\ \thethesisclass}
-\publishers{\thechair \\ \thedivision \\ Universität Kassel}
+\publishers{Unter Anleitung von \thesupervisor \newline\newline \thechair \\ \thedivision \\ Universität Kassel}
 
 % page for the correctors
 \newcommand{\makecorrectorpage}{%
