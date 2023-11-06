@@ -81,7 +81,7 @@
 
 % set title page elements
 \subject{Arbeit zur Erlangung des akademischen Grades\\ \thethesisclass}
-\publishers{Unter Anleitung von \thesupervisor \newline\newline \thechair \\ \thedivision \\ Universität Kassel}
+\publishers{\thesupervisor \newline\newline \thechair \\ \thedivision \\ Universität Kassel}
 
 % page for the correctors
 \newcommand{\makecorrectorpage}{%
