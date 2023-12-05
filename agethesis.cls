@@ -1,5 +1,5 @@
-\ProvidesClass{ukthesis}[2023/10/06 v0.9 wrapper to scrbook for thesis at UK]
-% Option for tu colors:
+\ProvidesClass{agethesis}[2023/10/06 v0.9 wrapper to scrbook for thesis at AGE]
+% Option for unikasselversity colors:
 \newif\if@ukcolor\@ukcolorfalse
 \DeclareOption{ukcolor}{\@ukcolortrue}
 
