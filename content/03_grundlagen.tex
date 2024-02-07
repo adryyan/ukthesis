@@ -8,10 +8,10 @@ Eine umfangreiche Einführung in die moderne Verwendung von \LaTeX{} gibt es hie
 
 Um dieses Dokument vollständig zu erstellen sind maximal vier Programmläufe nötig:
 \begin{enumerate}[nosep]
-    \item \texttt{lualatex BachelorArbeit.tex}
-    \item \texttt{biber BachelorArbeit.bcf}
-    \item \texttt{lualatex BachelorArbeit.tex}
-    \item \texttt{lualatex BachelorArbeit.tex}
+    \item \texttt{lualatex thesis.tex}
+    \item \texttt{biber thesis.bcf}
+    \item \texttt{lualatex thesis.tex}
+    \item \texttt{lualatex thesis.tex}
 \end{enumerate}
 
 Beim ersten Lauf des \LaTeX-Compilers werden die Kapitel, Links und zitierten Bibliographieeinträge in Hilfsdateien geschrieben.
@@ -25,12 +25,24 @@ Manchmal ist ein vierter Lauf nötig, falls sich durch das einfügen des Literat
 Das Tool \texttt{latexmk} übernimmt dies mit nur einem Programmaufruf und
 führ nur so viele Aufrufe durch, wie nötig sind.
 
-\texttt{latexmk --lualatex BachelorArbeit.tex}
+\texttt{latexmk --lualatex thesis.tex}
 
 Eine gute Option ist es, den \LaTeX{} Output in einem anderen 
 Ordner zu erzeugen, dies ist mit der \texttt{--output-directory} Option möglich:
 
-\texttt{latexmk --output-directory=build --lualatex BachelorArbeit.tex}
+\texttt{latexmk --output-directory=build --lualatex thesis.tex}
+
+
+\section{Erstellen des Ausgabedokuments mit Overleaf}
+Der Kompiliervorgang dieser Vorlage dauert zu lange für die freie Version von Overleaf und bricht vorzeitig ab.
+
+Allerdings kann Overleaf Premium kostenlos mit einem IEEE Collabratec Account aktiviert werden:
+
+\begin{center}
+    \ttfamily\url{https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/}
+\end{center}
+
+Dies ermöglicht zusätzlich, dass eingeladene Personen das Dokument zum Korrekturlesen bearbeiten und kommentieren können.
 
 
 \section{Erstellen des Ausgabedokuments mit Make}
