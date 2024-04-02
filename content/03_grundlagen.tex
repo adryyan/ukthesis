@@ -23,7 +23,7 @@ Beim nächsten \LaTeX-Lauf werden dann diese Hilfsdateien eingelesen und Literat
 Manchmal ist ein vierter Lauf nötig, falls sich durch das einfügen des Literaturverzeichnisses Seitenzahlen verändert haben.
 
 Das Tool \texttt{latexmk} übernimmt dies mit nur einem Programmaufruf und
-führ nur so viele Aufrufe durch, wie nötig sind.
+führt nur so viele Aufrufe durch, wie nötig sind.
 
 \texttt{latexmk --lualatex thesis.tex}
 
@@ -34,16 +34,8 @@ Ordner zu erzeugen, dies ist mit der \texttt{--output-directory} Option möglich
 
 
 \section{Erstellen des Ausgabedokuments mit Overleaf}
-Der Kompiliervorgang dieser Vorlage dauert zu lange für die freie Version von Overleaf und bricht vorzeitig ab.
-
-Allerdings kann Overleaf Premium kostenlos mit einem IEEE Collabratec Account aktiviert werden:
-
-\begin{center}
-    \ttfamily\url{https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/}
-\end{center}
-
-Dies ermöglicht zusätzlich, dass eingeladene Personen das Dokument zum Korrekturlesen bearbeiten und kommentieren können.
-
+Die freie Version von Overleaf erlaubt nur Kompilierzeiten bis zu 20 Sekunden.
+Sollte der Kompiliervorgang zu lange dauern, können Kapitel einzeln kompiliert werden mit \texttt{\textbackslash includeonly\{content/01\_einleitung,content/02\_struktur\}}.
 
 \section{Erstellen des Ausgabedokuments mit Make}
 

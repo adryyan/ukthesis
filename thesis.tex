@@ -52,6 +52,7 @@
 \usepackage{mathtools}
 
 % Enable Unicode-Math and follow the ISO-Standards for typesetting math
+% Remove this if you don't need this and want to save a little compile time 
 \usepackage[
   math-style=ISO,
   bold-style=ISO,
@@ -150,28 +151,31 @@
 % uk logo on top of the titlepage
 \titlehead{\centering\includegraphics[height=2.5cm]{logos/uk-logo.png}}
 
+% use this to only compile some of the chapters
+%\includeonly{content/01_einleitung,content/02_struktur}
+
 \begin{document}
 \frontmatter
-\input{content/hints.tex}
+\include{content/hints}
 \maketitle
 
 % Gutachterseite
 \makecorrectorpage
 
 % hier beginnt der Vorspann, nummeriert in römischen Zahlen
-\input{content/00_abstract.tex} % Optional
+\include{content/00_abstract} % Optional
 \tableofcontents
 
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
-\input{content/01_einleitung.tex}
-\input{content/02_struktur.tex}
-\input{content/03_grundlagen.tex}
-\input{content/04_figs_tabs.tex}
+\include{content/01_einleitung}
+\include{content/02_struktur}
+\include{content/03_grundlagen}
+\include{content/04_figs_tabs}
 
 \appendix
 % Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben
-\input{content/a_anhang.tex}
+\include{content/a_anhang}
 
 \backmatter
 \printbibliography
