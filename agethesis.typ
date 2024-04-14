@@ -41,7 +41,7 @@
   // Page layout
   let div_width = (100% - BCOR) / DIV
   let div_height = 100% / DIV
-  let margins = (top: div_height, bottom: 2 * div_height, x: 2 * div_width)
+  let margins = (top: div_height, bottom: 2 * div_height, x: 1.5 * div_width)
   set page(
     paper: "a4",
     margin: margins,
